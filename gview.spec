@@ -1,14 +1,13 @@
 Summary:	gView is a GTK+ image browser and viewer
 Summary(pl):	gView jest przegl±dark± plików graficznych opart± na GTK+
 Name:		gview
-Version:	0.1.11
+Version:	0.1.12
 Release:	1
 Group:		X11/Applications/Graphics
 Group(pl):	X11/Aplikacje/Grafika
 Copyright:	GPL
 Source0:	http://www.geocities.com/ResearchTriangle/Facility/1468/sg/%{name}-%{version}.tar.gz
 Source1:	gview.desktop
-Patch:		gview-synt.patch
 BuildRequires:	gtk+-devel >= 1.1.9
 BuildRequires:	glib-devel >= 1.1.9
 BuildRequires:	imlib-devel >= 1.4.0
