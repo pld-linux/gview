@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=gView
+Comment=Image Viewer
+Comment[pl]=Przegl±darka obrazków
+Exec=gview
+Terminal=0
+Type=Application
