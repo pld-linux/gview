@@ -1,13 +1,63 @@
-diff -Nru gview-0.1.15/Makefile.am gview-0.1.15.new/Makefile.am
---- gview-0.1.15/Makefile.am	Sun May 28 17:18:46 2000
-+++ gview-0.1.15.new/Makefile.am	Wed Jun  7 07:44:23 2000
-@@ -14,3 +14,9 @@
+diff -urN gview-0.1.15.orig/configure.in gview-0.1.15.new/configure.in
+--- gview-0.1.15.orig/configure.in	2000-05-29 07:19:08.000000000 +0200
++++ gview-0.1.15.new/configure.in	2004-07-12 18:40:05.239831864 +0200
+@@ -31,6 +31,7 @@
+ AC_PROG_CC
+ dnl AC_PROG_CXX
+ dnl AC_PROG_RANLIB
++AC_PROG_INTLTOOL
+ 
+ dnl ---------------------------------------------------------------------------
+ dnl clean compiles
+@@ -73,7 +74,14 @@
+ dnl Internationalization
+ dnl ---------------------------------------------------------------------------
+ ALL_LINGUAS="fr ko ja"
+-AM_GNU_GETTEXT
++
++AC_SUBST(ALL_LINGUAS)
++AC_DEFINE_UNQUOTED(ALL_LINGUAS, "${ALL_LINGUAS}", [Supported languages])
++
++GETTEXT_PACKAGE=gview
++AC_SUBST(GETTEXT_PACKAGE)
++AM_GLIB_GNU_GETTEXT
++AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package name])
+ 
+ dnl ---------------------------------------------------------------------------
+ dnl check for GTK
+@@ -188,7 +196,6 @@
+ dnl Makefiles to create:
+ dnl ---------------------------------------------------------------------------
+ AC_OUTPUT([
+-intl/Makefile
+ po/Makefile.in
+ src/Makefile
+ src/icons/Makefile
+diff -urN gview-0.1.15.orig/Makefile.am gview-0.1.15.new/Makefile.am
+--- gview-0.1.15.orig/Makefile.am	2000-05-28 17:18:46.000000000 +0200
++++ gview-0.1.15.new/Makefile.am	2004-07-12 19:39:31.363698632 +0200
+@@ -1,6 +1,6 @@
+ AUTOMAKE_OPTIONS=
+ 
+-SUBDIRS = po intl src
++SUBDIRS = po src
+ 
+ EXTRA_DIST = \
+ 	BUGS \
+@@ -14,3 +14,6 @@
  	gview.png \
  	gView.desktop \
  	install.gnome
 +
-+Graphicsdir=`gnome-config --datadir 2> /dev/null`/gnome/apps/Graphics
-+Graphics_DATA=gView.desktop
-+
 +pixmapsdir=`gnome-config --datadir 2> /dev/null`/pixmaps
 +pixmaps_DATA=gview.png
+diff -urN gview-0.1.15.orig/src/gview.h gview-0.1.15.new/src/gview.h
+--- gview-0.1.15.orig/src/gview.h	2000-05-27 14:09:00.000000000 +0200
++++ gview-0.1.15.new/src/gview.h	2004-07-12 18:37:02.062679024 +0200
+@@ -230,4 +230,4 @@
+ 
+ void menuOpenURL(GtkWidget *, gpointer);
+ void menuDelete(GtkWidget *, gpointer);
+-void menuRename(GtkWidget *, gpointer);
+\ Brak znaku nowej linii na koñcu pliku
++void menuRename(GtkWidget *, gpointer);
