@@ -3,5 +3,6 @@ Name=gView
 Comment=Image Viewer
 Comment[pl]=Przegl±darka obrazków
 Exec=gview
+Icon=gview.png
 Terminal=0
 Type=Application
