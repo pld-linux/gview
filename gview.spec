@@ -7,10 +7,10 @@ Group:		X11/Applications/Graphics
 Group(pl):	X11/Aplikacje/Grafika
 Copyright:	GPL
 Source:		http://www.geocities.com/ResearchTriangle/Facility/1468/sg/%{name}-%{version}.tar.gz
-BuildPrereq:	gtk+-devel >= 1.1.9
-BuildPrereq:	glib-devel >= 1.1.9
-BuildPrereq:	imlib-devel >= 1.4.0
-BuildPrereq:	XFree86-devel
+BuildRequires:	gtk+-devel >= 1.1.9
+BuildRequires:	glib-devel >= 1.1.9
+BuildRequires:	imlib-devel >= 1.4.0
+BuildRequires:	XFree86-devel
 BuildRoot:   	/tmp/%{name}-%{version}-root
 
 %define _prefix	/usr/X11R6
