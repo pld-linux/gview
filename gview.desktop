@@ -1,8 +1,9 @@
 [Desktop Entry]
 Name=gView
 Comment=Image Viewer
-Comment[pl]=Przegl±darka obrazków
+Comment[pl]=PrzeglÄ…darka obrazkÃ³w
 Exec=gview
 Icon=gview.png
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
