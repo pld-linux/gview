@@ -34,8 +34,8 @@ Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
 rm -rf missing
 gettextize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
