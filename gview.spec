@@ -2,7 +2,7 @@ Summary:	gView is a GTK+ image browser and viewer
 Summary(pl):	gView jest przegl±dark± plików graficznych opart± na GTK+
 Name:		gview
 Version:	0.1.15
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.petech.ac.za/pub/viewers/%{name}-%{version}.tar.gz
@@ -28,25 +28,26 @@ Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
-rm -rf missing
-%{__gettextize}
+glib-gettextize --copy --force
+intltoolize --copy --force
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	Graphicsdir=%{_applnkdir}/Graphics/Viewers
+	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Graphics/Viewers
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %find_lang %{name}
 
@@ -57,4 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog TODO NEWS AUTHORS
 %attr(755,root,root) %{_bindir}/gview
-%{_applnkdir}/Graphics/Viewers/gview.desktop
+%{_desktopdir}/*.desktop
+%{_pixmapsdir}/*.png
