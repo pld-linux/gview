@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=gView
+Name=GView
 Comment=Image Viewer
 Comment[pl]=Przeglądarka obrazków
 Exec=gview
