@@ -4,8 +4,6 @@ Name:		gview
 Version:	0.1.15
 Release:	3
 Group:		X11/Applications/Graphics
-Group(de):	X11/Applikationen/Grafik
-Group(pl):	X11/Aplikacje/Grafika
 License:	GPL
 Source0:	ftp://ftp.petech.ac.za/pub/viewers/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
