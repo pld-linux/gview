@@ -1,0 +1,13 @@
+diff -Nru gview-0.1.15/Makefile.am gview-0.1.15.new/Makefile.am
+--- gview-0.1.15/Makefile.am	Sun May 28 17:18:46 2000
++++ gview-0.1.15.new/Makefile.am	Wed Jun  7 07:44:23 2000
+@@ -14,3 +14,9 @@
+ 	gview.png \
+ 	gView.desktop \
+ 	install.gnome
++
++Graphicsdir=`gnome-config --datadir 2> /dev/null`/gnome/apps/Graphics
++Graphics_DATA=gView.desktop
++
++pixmapsdir=`gnome-config --datadir 2> /dev/null`/pixmaps
++pixmaps_DATA=gview.png
