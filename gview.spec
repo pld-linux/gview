@@ -21,7 +21,7 @@ that uses a style similar to that of ACDSee for Windows.
 
 %description -l pl
 gView jest przegl±dark± obrazków wykorzystuj±c± biblioteki GTK+ 
-i Imlib, posiadaj±c± interfejs zbli¿ony tego w ACDSee dla Windows.
+i Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
 
 %prep
 %setup -q
