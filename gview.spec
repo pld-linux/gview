@@ -9,9 +9,7 @@ License:	GPL
 Source0:	ftp://ftp.petech.ac.za/pub/viewers/%{name}-%{version}.tar.gz
 Source1:	gview.desktop
 BuildRequires:	gtk+-devel >= 1.1.9
-BuildRequires:	glib-devel >= 1.1.9
 BuildRequires:	imlib-devel >= 1.4.0
-BuildRequires:	XFree86-devel
 URL:		http://gview.netpedia.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
