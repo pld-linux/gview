@@ -27,7 +27,6 @@ i Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
 %setup -q
 
 %build
-LDFLAGS="-s" \
 %configure 
 
 make
