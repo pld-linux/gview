@@ -2,9 +2,9 @@ Summary:	gView is a GTK+ image browser and viewer
 Summary(pl):	gView jest przegl±dark± plików graficznych opart± na GTK+
 Name:		gview
 Version:	0.1.15
-Release:	3
-Group:		X11/Applications/Graphics
+Release:	4
 License:	GPL
+Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.petech.ac.za/pub/viewers/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-automake.patch
@@ -48,8 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Graphics/Viewers
 
-gzip -9nf README ChangeLog TODO NEWS AUTHORS
-
 %find_lang %{name}
 
 %clean
@@ -57,6 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README ChangeLog TODO NEWS AUTHORS
 %attr(755,root,root) %{_bindir}/gview
 %{_applnkdir}/Graphics/Viewers/gview.desktop
