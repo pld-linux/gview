@@ -32,7 +32,7 @@ Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
 
 %build
 rm -rf missing
-gettextize --copy --force
+%{__gettextize}
 aclocal
 %{__autoconf}
 %{__automake}
