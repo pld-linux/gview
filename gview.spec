@@ -2,7 +2,7 @@ Summary:	gView is a GTK+ image browser and viewer
 Summary(pl):	gView jest przegl±dark± plików graficznych opart± na GTK+
 Name:		gview
 Version:	0.1.15
-Release:	2
+Release:	3
 Group:		X11/Applications/Graphics
 Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
@@ -11,6 +11,7 @@ Source0:	ftp://ftp.petech.ac.za/pub/viewers/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-automake.patch
 BuildRequires:	automake
+BuildRequires:	autoconf
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.1.9
 BuildRequires:	imlib-devel >= 1.4.0
@@ -32,8 +33,11 @@ Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
 %patch -p1
 
 %build
-automake
+rm -rf missing
 gettextize --copy --force
+aclocal
+autoconf
+automake -a -c
 %configure
 %{__make}
 
