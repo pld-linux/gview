@@ -13,10 +13,9 @@ BuildRequires:	glib-devel >= 1.1.9
 BuildRequires:	imlib-devel >= 1.4.0
 BuildRequires:	XFree86-devel
 URL:		http://gview.netpedia.net/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 gView is an image browser and viewer, using GTK+ and Imlib, that uses a
