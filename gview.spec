@@ -26,7 +26,6 @@ i Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
 
 %prep
 %setup -q
-%patch -p0
 
 %build
 %configure 
