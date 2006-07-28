@@ -5,7 +5,7 @@ Version:	0.1.15
 Release:	5
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	ftp://ftp.petech.ac.za/pub/viewers/%{name}-%{version}.tar.gz
+Source0:	http://homepages.petech.ac.za/~bruces/%{name}-%{version}.tar.gz
 # Source0-md5:	f54227f9604c57b07ef2678c00d6ab4a
 Source1:	%{name}.desktop
 Patch0:		%{name}-automake.patch
@@ -32,7 +32,7 @@ Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
 
 %build
 glib-gettextize --copy --force
-intltoolize --copy --force
+%{__intltoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
