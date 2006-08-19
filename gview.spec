@@ -1,5 +1,5 @@
-Summary:	gView is a GTK+ image browser and viewer
-Summary(pl):	gView jest przegl±dark± plików graficznych opart± na GTK+
+Summary:	gView - a GTK+ image browser and viewer
+Summary(pl):	gView - przegl±darka plików graficznych oparta na GTK+
 Name:		gview
 Version:	0.1.15
 Release:	5
@@ -9,14 +9,14 @@ Source0:	http://homepages.petech.ac.za/~bruces/%{name}-%{version}.tar.gz
 # Source0-md5:	f54227f9604c57b07ef2678c00d6ab4a
 Source1:	%{name}.desktop
 Patch0:		%{name}-automake.patch
+# dead; http://gview.sf.net/ is different project
+#URL:		http://gview.netpedia.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.1.9
 BuildRequires:	imlib-devel >= 1.4.0
-URL:		http://gview.netpedia.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 gView is an image browser and viewer, using GTK+ and Imlib, that uses
