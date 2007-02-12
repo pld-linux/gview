@@ -1,5 +1,5 @@
 Summary:	gView - a GTK+ image browser and viewer
-Summary(pl):	gView - przegl±darka plików graficznych oparta na GTK+
+Summary(pl.UTF-8):   gView - przeglÄ…darka plikÃ³w graficznych oparta na GTK+
 Name:		gview
 Version:	0.1.15
 Release:	5
@@ -22,9 +22,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 gView is an image browser and viewer, using GTK+ and Imlib, that uses
 a style similar to that of ACDSee for Windows.
 
-%description -l pl
-gView jest przegl±dark± obrazków wykorzystuj±c± biblioteki GTK+ i
-Imlib, posiadaj±c± interfejs zbli¿ony do ACDSee dla Windows.
+%description -l pl.UTF-8
+gView jest przeglÄ…darkÄ… obrazkÃ³w wykorzystujÄ…cÄ… biblioteki GTK+ i
+Imlib, posiadajÄ…cÄ… interfejs zbliÅ¼ony do ACDSee dla Windows.
 
 %prep
 %setup -q
