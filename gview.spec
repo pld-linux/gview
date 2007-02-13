@@ -1,5 +1,5 @@
 Summary:	gView - a GTK+ image browser and viewer
-Summary(pl.UTF-8):   gView - przeglądarka plików graficznych oparta na GTK+
+Summary(pl.UTF-8):	gView - przeglądarka plików graficznych oparta na GTK+
 Name:		gview
 Version:	0.1.15
 Release:	5
