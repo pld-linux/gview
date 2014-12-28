@@ -13,7 +13,7 @@ Patch0:		%{name}-automake.patch
 #URL:		http://gview.netpedia.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+-devel >= 1.1.9
 BuildRequires:	imlib-devel >= 1.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
